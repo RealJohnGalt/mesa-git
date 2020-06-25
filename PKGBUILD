@@ -26,15 +26,15 @@ url="https://www.mesa3d.org"
 license=('custom')
 source=('mesa::git+https://gitlab.freedesktop.org/mesa/mesa.git'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5167.diff'
-                'https://github.com/RealJohnGalt/mesa-git/raw/master/bufferbump.diff'
+                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5632.diff'
                 'LICENSE')
 md5sums=('SKIP'
          '911989d5b4a97774b15d66adca035d7a'
-         '593e019d6a66e9826a22f2502b88ec3b'
+         '727077668d1ed0a616269c1e6f2465b8'
          '5c65a0fe315dd347e09b1f2826a1df5a')
 sha512sums=('SKIP'
             '4e561f3646d061f4a03df591acc03456fba06678da0e29f5b32adea9f44b59e0bd4078f9349b91d42dce7d30edbf8620083bd58cbabe2ebbd0a163ec1803f517'
-            '1061d503a907fb9ed10dc28950917b63c9598dd0232b9a5cc947ae002ec57c81f50f653f1862eb1d3dab5e20abaf154d093605ab20585785c78e4da6bf827db4'
+            '46f9a19217a26e54304653e96f16a0419dfb34783985573162603d1a1fd916bbdb950648bcb8bae879a40b3d17279c1eb47d174192283c3bcd083595fa2fd23e'
             '25da77914dded10c1f432ebcbf29941124138824ceecaf1367b3deedafaecabc082d463abcfa3d15abff59f177491472b505bcb5ba0c4a51bb6b93b4721a23c2')
 
 # NINJAFLAGS is an env var used to pass commandline options to ninja
@@ -102,7 +102,7 @@ prepare() {
     fi
     cd "${srcdir}/mesa"
     patch -p1 < "${srcdir}/5167.diff"
-    patch -p1 < "${srcdir}/bufferbump.diff"
+    patch -p1 < "${srcdir}/5632.diff"
 }
 
 build () {
