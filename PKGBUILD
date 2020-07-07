@@ -11,7 +11,7 @@
 
 pkgname=mesa-git
 pkgdesc="an open-source implementation of the OpenGL specification, git version"
-pkgver=20.2.0_devel.125388.91a82d00696
+pkgver=20.2.0_devel.125701.0ca266025ab
 pkgrel=1
 arch=('x86_64')
 makedepends=('git' 'python-mako' 'xorgproto'
@@ -98,6 +98,7 @@ prepare() {
         rm -rf _build
     fi
     cd "${srcdir}/mesa"
+    git reset --hard 0ca266025ab309d538ed8c804cb46d2945c6a547
     patch -p1 < "${srcdir}/5167.diff"
 }
 
