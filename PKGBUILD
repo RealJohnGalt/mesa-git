@@ -11,7 +11,7 @@
 
 pkgname=mesa-git
 pkgdesc="an open-source implementation of the OpenGL specification, git version"
-pkgver=20.2.0_devel.125900.49d35f3d882
+pkgver=20.2.0_devel.125902.5d1bff290af
 pkgrel=1
 arch=('x86_64')
 makedepends=('git' 'python-mako' 'xorgproto'
@@ -26,12 +26,15 @@ url="https://www.mesa3d.org"
 license=('custom')
 source=('mesa::git+https://gitlab.freedesktop.org/mesa/mesa.git'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5728.diff'
+                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5683.diff'
                 'LICENSE')
 md5sums=('SKIP'
          'f5790c785525365eb9a46fe48812c6aa'
+         '33015ff4bc0e84a3f3e8be19c83fa450'
          '5c65a0fe315dd347e09b1f2826a1df5a')
 sha512sums=('SKIP'
             '889565e9a5cc4b1564fab1156b0a88b77e9802d56a5792b315d2552812c4eb478682b9f7046b89c0e41cd2492f768bd009ec2d5bf570fb42345910c4fe0d28b4'
+            '2c5e3bc2edb12f0280aa4eff39aacdfa9bebd1cda97d7da38b73859cd63a274ff79e5a5fe326519f40da9bb24f10eacf5a21fd186ab85cf3d9751cc2e03974af'
             '25da77914dded10c1f432ebcbf29941124138824ceecaf1367b3deedafaecabc082d463abcfa3d15abff59f177491472b505bcb5ba0c4a51bb6b93b4721a23c2')
 
 # NINJAFLAGS is an env var used to pass commandline options to ninja
@@ -99,6 +102,7 @@ prepare() {
     fi
     cd "${srcdir}/mesa"
     patch -p1 -R < "${srcdir}/5728.diff"
+    patch -p1 -R < "${srcdir}/5683.diff"
 
 }
 
