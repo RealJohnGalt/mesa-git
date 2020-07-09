@@ -27,6 +27,7 @@ license=('custom')
 source=('mesa::git+https://gitlab.freedesktop.org/mesa/mesa.git'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5869.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5868.diff'
+                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5728.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5863.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5865.diff'
                 'LICENSE')
@@ -115,6 +116,7 @@ prepare() {
     patch -p1 < "${srcdir}/5868.diff"
     patch -p1 < "${srcdir}/5863.diff"
     patch -p1 < "${srcdir}/5865.diff"
+    patch -p1 -R < "${srcdir}/5728.diff"
 
 }
 
