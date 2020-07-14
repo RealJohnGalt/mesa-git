@@ -30,22 +30,26 @@ source=('mesa::git+https://gitlab.freedesktop.org/mesa/mesa.git'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5728.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5863.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5865.diff'
+                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5899.diff'
+                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5896.diff'
                 'LICENSE')
 md5sums=('SKIP'
-         'f5790c785525365eb9a46fe48812c6aa'
-         '33015ff4bc0e84a3f3e8be19c83fa450'
-         '71f1c3b1b8db3b4b7d09c6bec8aa94b1'
+         'a3ad2c21f98bd929deaf43c34338032d'
          '0a9cb8595ac384413eef8f7f006cd806'
+         'f5790c785525365eb9a46fe48812c6aa'
          '81f010c2a02355017af2a8349fafa8df'
          '39b15400e0cfe98a1217a916141175d1'
+         '1325126b0357b08c5698a62ee4abcd70'
+         '6fd950923f8da7ea904437a8ca5e8b55'
          '5c65a0fe315dd347e09b1f2826a1df5a')
 sha512sums=('SKIP'
-            '889565e9a5cc4b1564fab1156b0a88b77e9802d56a5792b315d2552812c4eb478682b9f7046b89c0e41cd2492f768bd009ec2d5bf570fb42345910c4fe0d28b4'
-            '2c5e3bc2edb12f0280aa4eff39aacdfa9bebd1cda97d7da38b73859cd63a274ff79e5a5fe326519f40da9bb24f10eacf5a21fd186ab85cf3d9751cc2e03974af'
-            'a816fa4f35a5e5279d2004848e0b865748c243400c06e1568fe4ef8265afaa4ef914f3cbd96e55a39409ec8722c85ac66bd634b8473ffa269cfb7cb5c85ad18d'
+            '11ec2818560b55b18962c5b5dd940906d0e0762b6d0204c62a9c9bdd08887603ebe2b7efa9a404dc4f7940e5df00d6a8d1dc233d77029fe0c44ea5bc84640812'
             '76944ab316fb90d30b45593a315098ec31ea7f9a4d3ffd8ec5eba41930f61f249a3be146c0349be92954e1a9ea03b3f9995589b597116c365d49af673f671809'
+            '889565e9a5cc4b1564fab1156b0a88b77e9802d56a5792b315d2552812c4eb478682b9f7046b89c0e41cd2492f768bd009ec2d5bf570fb42345910c4fe0d28b4'
             '6fb877e0647aa1130353b3bffff03400510c59659de2d3653ed72e2741f485d29d06ea05ddd709a644b5bed2918721d29d1eac52f16f70edafa6e476b320224c'
             '8b44b83b9341b7ed8a59bdce250343cb2a71f0cd5c7d72afcfc892d3f83e93b53683c0da7862b01c28a5014576e09f214017626b92b820f92caf792cd1eab37d'
+            '23bdc936fcea72b57435c05e514bd10ad90125a19c84d7cf49e32081eb4a1457d1a19abd9596555dc668491e5ff96a293e0bfed269e00f6478185915625cd550'
+            'b25dad451182bfa53b7915a82c250e72f93dd4416f0bc3bafc0a743fb8f78fddcd6e7f1ed3a0be76a8c2557a7673781a81becdfb4c6c9fcbd70d7326c8d58c02'
             '25da77914dded10c1f432ebcbf29941124138824ceecaf1367b3deedafaecabc082d463abcfa3d15abff59f177491472b505bcb5ba0c4a51bb6b93b4721a23c2')
 
 # NINJAFLAGS is an env var used to pass commandline options to ninja
@@ -116,6 +120,8 @@ prepare() {
     patch -p1 < "${srcdir}/5868.diff"
     patch -p1 < "${srcdir}/5863.diff"
     patch -p1 < "${srcdir}/5865.diff"
+    patch -p1 < "${srcdir}/5899.diff"
+    patch -p1 < "${srcdir}/5896.diff"
     patch -p1 -R < "${srcdir}/5728.diff"
 
 }
