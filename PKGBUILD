@@ -11,7 +11,7 @@
 
 pkgname=mesa-git
 pkgdesc="an open-source implementation of the OpenGL specification, git version"
-pkgver=20.2.0_devel.125956.e086f64d393
+pkgver=20.2.0_devel.125959.55776a0ae06
 pkgrel=1
 arch=('x86_64')
 makedepends=('git' 'python-mako' 'xorgproto'
@@ -25,8 +25,6 @@ conflicts=('mesa' 'opencl-mesa' 'vulkan-intel' 'vulkan-radeon' 'vulkan-mesa-laye
 url="https://www.mesa3d.org"
 license=('custom')
 source=('mesa::git+https://gitlab.freedesktop.org/mesa/mesa.git'
-                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5728.diff'
-                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5683.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5869.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5868.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5863.diff'
@@ -113,8 +111,10 @@ prepare() {
         rm -rf _build
     fi
     cd "${srcdir}/mesa"
-    patch -p1 -R < "${srcdir}/5728.diff"
-    patch -p1 -R < "${srcdir}/5683.diff"
+    patch -p1 < "${srcdir}/5869.diff"
+    patch -p1 < "${srcdir}/5868.diff"
+    patch -p1 < "${srcdir}/5863.diff"
+    patch -p1 < "${srcdir}/5865.diff"
 
 }
 
