@@ -35,20 +35,20 @@ source=('mesa::git+https://gitlab.freedesktop.org/mesa/mesa.git'
                 'LICENSE')
 md5sums=('SKIP'
          'a3ad2c21f98bd929deaf43c34338032d'
-         '0a9cb8595ac384413eef8f7f006cd806'
+         '5a27fa6601abcc394a8b2222cfdf9d78'
          'f5790c785525365eb9a46fe48812c6aa'
          '81f010c2a02355017af2a8349fafa8df'
          '39b15400e0cfe98a1217a916141175d1'
-         '1325126b0357b08c5698a62ee4abcd70'
+         '1783918ef1cbc213ed5a3c4fe9882a26'
          '6fd950923f8da7ea904437a8ca5e8b55'
          '5c65a0fe315dd347e09b1f2826a1df5a')
 sha512sums=('SKIP'
             '11ec2818560b55b18962c5b5dd940906d0e0762b6d0204c62a9c9bdd08887603ebe2b7efa9a404dc4f7940e5df00d6a8d1dc233d77029fe0c44ea5bc84640812'
-            '76944ab316fb90d30b45593a315098ec31ea7f9a4d3ffd8ec5eba41930f61f249a3be146c0349be92954e1a9ea03b3f9995589b597116c365d49af673f671809'
+            '3b026fce5747f11c155ce5537742e6f82c3a4ac9c747d1bc2aa4d4dea1f735590c2d455a7d3dbb27a05020d9a3948063a76bf8f9f834cc9627e1e7c34e096d8f'
             '889565e9a5cc4b1564fab1156b0a88b77e9802d56a5792b315d2552812c4eb478682b9f7046b89c0e41cd2492f768bd009ec2d5bf570fb42345910c4fe0d28b4'
             '6fb877e0647aa1130353b3bffff03400510c59659de2d3653ed72e2741f485d29d06ea05ddd709a644b5bed2918721d29d1eac52f16f70edafa6e476b320224c'
             '8b44b83b9341b7ed8a59bdce250343cb2a71f0cd5c7d72afcfc892d3f83e93b53683c0da7862b01c28a5014576e09f214017626b92b820f92caf792cd1eab37d'
-            '23bdc936fcea72b57435c05e514bd10ad90125a19c84d7cf49e32081eb4a1457d1a19abd9596555dc668491e5ff96a293e0bfed269e00f6478185915625cd550'
+            '931f6bd8afa44d016546f4d849a09fc1a0f89fa40095a6a4d967e01344c0cac7757a62c6f1c23a6a589ac8c9073a05103370a0f4496de48a1f4ee19ae2c0b4e9'
             'b25dad451182bfa53b7915a82c250e72f93dd4416f0bc3bafc0a743fb8f78fddcd6e7f1ed3a0be76a8c2557a7673781a81becdfb4c6c9fcbd70d7326c8d58c02'
             '25da77914dded10c1f432ebcbf29941124138824ceecaf1367b3deedafaecabc082d463abcfa3d15abff59f177491472b505bcb5ba0c4a51bb6b93b4721a23c2')
 
@@ -116,9 +116,6 @@ prepare() {
         rm -rf _build
     fi
     cd "${srcdir}/mesa"
-    #patch -p1 < "${srcdir}/5869.diff"
-    patch -p1 < "${srcdir}/5868.diff"
-    patch -p1 < "${srcdir}/5863.diff"
     patch -p1 < "${srcdir}/5865.diff"
     patch -p1 < "${srcdir}/5899.diff"
     patch -p1 < "${srcdir}/5896.diff"
