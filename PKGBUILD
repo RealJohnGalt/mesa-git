@@ -11,7 +11,7 @@
 
 pkgname=mesa-git
 pkgdesc="an open-source implementation of the OpenGL specification, git version"
-pkgver=20.2.0_devel.126128.a9c94861063
+pkgver=20.2.0_devel.126213.3f8656401b6
 pkgrel=1
 arch=('x86_64')
 makedepends=('git' 'python-mako' 'xorgproto'
@@ -25,31 +25,31 @@ conflicts=('mesa' 'opencl-mesa' 'vulkan-intel' 'vulkan-radeon' 'vulkan-mesa-laye
 url="https://www.mesa3d.org"
 license=('custom')
 source=('mesa::git+https://gitlab.freedesktop.org/mesa/mesa.git'
-                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5869.diff'
-                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5868.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5728.diff'
-                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5863.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5865.diff'
-                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5899.diff'
-                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5896.diff'
+                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5949.diff'
+                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5945.diff'
+                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5927.diff'
+                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5924.diff'
+                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5923.diff'
                 'LICENSE')
 md5sums=('SKIP'
-         'a3ad2c21f98bd929deaf43c34338032d'
-         '5a27fa6601abcc394a8b2222cfdf9d78'
          'f5790c785525365eb9a46fe48812c6aa'
-         '81f010c2a02355017af2a8349fafa8df'
          '39b15400e0cfe98a1217a916141175d1'
-         '1783918ef1cbc213ed5a3c4fe9882a26'
-         '6fd950923f8da7ea904437a8ca5e8b55'
+         'cd87eeb820788224d770cb0073e1f196'
+         '5f2a47e4a59f2cea37593be214cc26e9'
+         '01793a514153eb50721d59b7a92316a7'
+         'd16332b2811550208a64e768aa9701c7'
+         'f45194ce4905ac462682b4302ec625a3'
          '5c65a0fe315dd347e09b1f2826a1df5a')
 sha512sums=('SKIP'
-            '11ec2818560b55b18962c5b5dd940906d0e0762b6d0204c62a9c9bdd08887603ebe2b7efa9a404dc4f7940e5df00d6a8d1dc233d77029fe0c44ea5bc84640812'
-            '3b026fce5747f11c155ce5537742e6f82c3a4ac9c747d1bc2aa4d4dea1f735590c2d455a7d3dbb27a05020d9a3948063a76bf8f9f834cc9627e1e7c34e096d8f'
             '889565e9a5cc4b1564fab1156b0a88b77e9802d56a5792b315d2552812c4eb478682b9f7046b89c0e41cd2492f768bd009ec2d5bf570fb42345910c4fe0d28b4'
-            '6fb877e0647aa1130353b3bffff03400510c59659de2d3653ed72e2741f485d29d06ea05ddd709a644b5bed2918721d29d1eac52f16f70edafa6e476b320224c'
             '8b44b83b9341b7ed8a59bdce250343cb2a71f0cd5c7d72afcfc892d3f83e93b53683c0da7862b01c28a5014576e09f214017626b92b820f92caf792cd1eab37d'
-            '931f6bd8afa44d016546f4d849a09fc1a0f89fa40095a6a4d967e01344c0cac7757a62c6f1c23a6a589ac8c9073a05103370a0f4496de48a1f4ee19ae2c0b4e9'
-            'b25dad451182bfa53b7915a82c250e72f93dd4416f0bc3bafc0a743fb8f78fddcd6e7f1ed3a0be76a8c2557a7673781a81becdfb4c6c9fcbd70d7326c8d58c02'
+            '07a85825e7cfd61e4aa0ebae519cc0febc48798eb8b596ea9b63721d8045b6168980beeef6986aea120ab853ba4053dac6368c956bd18f5de90e58e42723dac2'
+            '3b432ef147b15f85f144472c394a83b311c0dbae7818776c99a510d133e641411eff994f5e96fe2cb4d01ba9cea3181266784ece3f592f96141806e8fefe1ec1'
+            'c4f02f2dc04feda956af62f96ce95760561d911805b3576dc311f9c007499ac6292140d41b583fcbfaf8b09e338c38cc4dc3e80e18fc25824f5e2fd0769a7db6'
+            '79dbe9d4c5f24a97acb1d445bf47d9dd351ca61036e0d6ffdba3e51ac736699afb6bae7a1d327776690ae3261acd520dd0fde171b4b2f991f0a2063398bfc3c7'
+            '8e5424486c01b1cedef3d124390496328bf322c174ceda67e5f4440f41403180fe8cbacb2d158dbd45f2f406d6ed7d54458199089934f20bf113a50849c2e36a'
             '25da77914dded10c1f432ebcbf29941124138824ceecaf1367b3deedafaecabc082d463abcfa3d15abff59f177491472b505bcb5ba0c4a51bb6b93b4721a23c2')
 
 # NINJAFLAGS is an env var used to pass commandline options to ninja
@@ -117,8 +117,11 @@ prepare() {
     fi
     cd "${srcdir}/mesa"
     patch -p1 < "${srcdir}/5865.diff"
-    patch -p1 < "${srcdir}/5899.diff"
-    patch -p1 < "${srcdir}/5896.diff"
+    patch -p1 < "${srcdir}/5949.diff"
+    patch -p1 < "${srcdir}/5945.diff"
+    patch -p1 < "${srcdir}/5927.diff"
+    patch -p1 < "${srcdir}/5924.diff"
+    patch -p1 < "${srcdir}/5923.diff"
     patch -p1 -R < "${srcdir}/5728.diff"
 
 }
