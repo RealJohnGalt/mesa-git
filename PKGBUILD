@@ -11,7 +11,7 @@
 
 pkgname=mesa-git
 pkgdesc="an open-source implementation of the OpenGL specification, git version"
-pkgver=20.2.0_devel.126223.2b796c76852
+pkgver=20.2.0_devel.126287.e764192f401
 pkgrel=1
 arch=('x86_64')
 makedepends=('git' 'python-mako' 'xorgproto'
@@ -35,6 +35,7 @@ source=('mesa::git+https://gitlab.freedesktop.org/mesa/mesa.git'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5972.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5968.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5750.diff'
+                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5728.diff'
                 'https://gitlab.freedesktop.org/pepp/mesa/-/commit/d71ff5b42cab85817e5c22c5e21eeaca87e39dec.diff'
                 'LICENSE')
 md5sums=('SKIP'
@@ -48,6 +49,7 @@ md5sums=('SKIP'
          '5ac19db2859f6f8b8d5037d4ba5ddb48'
          '7964d9537e1927babb95eb2383dbf520'
          '560ebaec0715b95010590f952b918989'
+         'f5790c785525365eb9a46fe48812c6aa'
          'd92c6a427f007f563516f01f84358283'
          '5c65a0fe315dd347e09b1f2826a1df5a')
 sha512sums=('SKIP'
@@ -61,6 +63,7 @@ sha512sums=('SKIP'
             '35d9063905fb2f221416828d8510acfb9fd9d6a5606b558f970a52e74d49bddf7ecceb6e52c14cca85193357f114727ef319b61b691d81071b2287147482aed6'
             '40b904e951099a5bdd4d449e7a7063762ed4e8d957332bdf1baab53b594a6b4bc3040ab47c02aeb448a8eec9641b7d7e8633e2bcb443e52a1afe36fa49ba4289'
             '2e59abb5c4bf51e363ce73f166287411f971d9dd146f57a133524e67b37e3656baaf21a8f9f5fc2b07fca271d7bea9d15110a8f430e84ab0009251cc653fb081'
+            '889565e9a5cc4b1564fab1156b0a88b77e9802d56a5792b315d2552812c4eb478682b9f7046b89c0e41cd2492f768bd009ec2d5bf570fb42345910c4fe0d28b4'
             '37e3630ce56d003044168f25c54f65d84e78df386a5405fd1936a3754e85125c64db7fb235d202d578ee8b7e4c736a86632658eb2badb54ac7602d0f248e2783'
             '25da77914dded10c1f432ebcbf29941124138824ceecaf1367b3deedafaecabc082d463abcfa3d15abff59f177491472b505bcb5ba0c4a51bb6b93b4721a23c2')
 
@@ -139,6 +142,7 @@ prepare() {
     patch -p1 < "${srcdir}/5968.diff"
     patch -p1 < "${srcdir}/5750.diff"
     patch -p1 < "${srcdir}/d71ff5b42cab85817e5c22c5e21eeaca87e39dec.diff"
+    patch -p1 -R < "${srcdir}/5728.diff"
 
 }
 
