@@ -35,7 +35,6 @@ source=('mesa::git+https://gitlab.freedesktop.org/mesa/mesa.git'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5972.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5968.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5750.diff'
-                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5523.diff'
                 'https://gitlab.freedesktop.org/pepp/mesa/-/commit/d71ff5b42cab85817e5c22c5e21eeaca87e39dec.diff'
                 'LICENSE')
 md5sums=('SKIP'
@@ -49,7 +48,6 @@ md5sums=('SKIP'
          '5ac19db2859f6f8b8d5037d4ba5ddb48'
          '7964d9537e1927babb95eb2383dbf520'
          '560ebaec0715b95010590f952b918989'
-         'd2740a053fef91c50cb5c693930cea55'
          'd92c6a427f007f563516f01f84358283'
          '5c65a0fe315dd347e09b1f2826a1df5a')
 sha512sums=('SKIP'
@@ -63,7 +61,6 @@ sha512sums=('SKIP'
             '35d9063905fb2f221416828d8510acfb9fd9d6a5606b558f970a52e74d49bddf7ecceb6e52c14cca85193357f114727ef319b61b691d81071b2287147482aed6'
             '40b904e951099a5bdd4d449e7a7063762ed4e8d957332bdf1baab53b594a6b4bc3040ab47c02aeb448a8eec9641b7d7e8633e2bcb443e52a1afe36fa49ba4289'
             '2e59abb5c4bf51e363ce73f166287411f971d9dd146f57a133524e67b37e3656baaf21a8f9f5fc2b07fca271d7bea9d15110a8f430e84ab0009251cc653fb081'
-            '1d7f7228210859537735030195ff34de4bf76c06b816c826398f4d1885ed4a679dbd3c0ebd3be6d236e3cde163342901c48346ea3f992acd33c4df95350de1e9'
             '37e3630ce56d003044168f25c54f65d84e78df386a5405fd1936a3754e85125c64db7fb235d202d578ee8b7e4c736a86632658eb2badb54ac7602d0f248e2783'
             '25da77914dded10c1f432ebcbf29941124138824ceecaf1367b3deedafaecabc082d463abcfa3d15abff59f177491472b505bcb5ba0c4a51bb6b93b4721a23c2')
 
@@ -141,7 +138,6 @@ prepare() {
     patch -p1 < "${srcdir}/5972.diff"
     patch -p1 < "${srcdir}/5968.diff"
     patch -p1 < "${srcdir}/5750.diff"
-    patch -p1 < "${srcdir}/5523.diff"
     patch -p1 < "${srcdir}/d71ff5b42cab85817e5c22c5e21eeaca87e39dec.diff"
 
 }
