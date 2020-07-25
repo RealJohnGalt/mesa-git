@@ -11,7 +11,7 @@
 
 pkgname=mesa-git
 pkgdesc="an open-source implementation of the OpenGL specification, git version"
-pkgver=20.2.0_devel.126446.ce4064fe2fe
+pkgver=20.2.0_devel.126531.63cf8adb124
 pkgrel=1
 arch=('x86_64')
 makedepends=('git' 'python-mako' 'xorgproto'
@@ -31,6 +31,7 @@ source=('mesa::git+https://gitlab.freedesktop.org/mesa/mesa.git'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5750.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5728.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5966.diff'
+                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6063.diff'
                 'https://gitlab.freedesktop.org/pepp/mesa/-/commit/d71ff5b42cab85817e5c22c5e21eeaca87e39dec.diff'
                 'LICENSE')
 md5sums=('SKIP'
@@ -40,6 +41,7 @@ md5sums=('SKIP'
          '560ebaec0715b95010590f952b918989'
          'f5790c785525365eb9a46fe48812c6aa'
          'db915bcdebe73d515b5c39ac44bf87a1'
+         'cfce5e45e07e4f15816ec514e0b867e5'
          'd92c6a427f007f563516f01f84358283'
          '5c65a0fe315dd347e09b1f2826a1df5a')
 sha512sums=('SKIP'
@@ -49,6 +51,7 @@ sha512sums=('SKIP'
             '2e59abb5c4bf51e363ce73f166287411f971d9dd146f57a133524e67b37e3656baaf21a8f9f5fc2b07fca271d7bea9d15110a8f430e84ab0009251cc653fb081'
             '889565e9a5cc4b1564fab1156b0a88b77e9802d56a5792b315d2552812c4eb478682b9f7046b89c0e41cd2492f768bd009ec2d5bf570fb42345910c4fe0d28b4'
             '12532a6a196094e876c40db5a8b27e0e2cb73e006783c55699524fb74c061536e705f3767223d9688008be4fbdbfe3494404f5a9c83f3f396e81a8f705784244'
+            '43cd3a78712a39d39ec343f537620f271c7741a55424cc37e211a36a661df5c5481049754695431de81694a64077d3467fc08b90dafa7cd33581f879bc502fea'
             '37e3630ce56d003044168f25c54f65d84e78df386a5405fd1936a3754e85125c64db7fb235d202d578ee8b7e4c736a86632658eb2badb54ac7602d0f248e2783'
             '25da77914dded10c1f432ebcbf29941124138824ceecaf1367b3deedafaecabc082d463abcfa3d15abff59f177491472b505bcb5ba0c4a51bb6b93b4721a23c2')
 
@@ -116,12 +119,12 @@ prepare() {
         rm -rf _build
     fi
     cd "${srcdir}/mesa"
-    git reset --hard ce4064fe2fe
     patch -p1 < "${srcdir}/5924.diff"
-    patch -p1 < "${srcdir}/5980.diff"
+    #patch -p1 < "${srcdir}/5980.diff"
     patch -p1 < "${srcdir}/5968.diff"
     patch -p1 < "${srcdir}/5750.diff"
     patch -p1 < "${srcdir}/5966.diff"
+    patch -p1 < "${srcdir}/6063.diff"
     patch -p1 < "${srcdir}/d71ff5b42cab85817e5c22c5e21eeaca87e39dec.diff"
     patch -p1 -R < "${srcdir}/5728.diff"
 
