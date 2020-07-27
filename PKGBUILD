@@ -11,7 +11,7 @@
 
 pkgname=mesa-git
 pkgdesc="an open-source implementation of the OpenGL specification, git version"
-pkgver=20.2.0_devel.126531.63cf8adb124
+pkgver=20.2.0_devel.126539.e2e89fb137c
 pkgrel=1
 arch=('x86_64')
 makedepends=('git' 'python-mako' 'xorgproto'
@@ -32,6 +32,10 @@ source=('mesa::git+https://gitlab.freedesktop.org/mesa/mesa.git'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5728.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5966.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6063.diff'
+                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6063.diff'
+                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6072.diff'
+                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6073.diff'
+                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6074.diff'
                 'https://gitlab.freedesktop.org/pepp/mesa/-/commit/d71ff5b42cab85817e5c22c5e21eeaca87e39dec.diff'
                 'LICENSE')
 md5sums=('SKIP'
@@ -42,6 +46,10 @@ md5sums=('SKIP'
          'f5790c785525365eb9a46fe48812c6aa'
          'db915bcdebe73d515b5c39ac44bf87a1'
          'cfce5e45e07e4f15816ec514e0b867e5'
+         'cfce5e45e07e4f15816ec514e0b867e5'
+         'fe5a7d188a0b9a52e4312c34022c869b'
+         'c7951c927603dc25c69e80b2f097c892'
+         'c00ac7053c647b08d471db523781bbb5'
          'd92c6a427f007f563516f01f84358283'
          '5c65a0fe315dd347e09b1f2826a1df5a')
 sha512sums=('SKIP'
@@ -52,6 +60,10 @@ sha512sums=('SKIP'
             '889565e9a5cc4b1564fab1156b0a88b77e9802d56a5792b315d2552812c4eb478682b9f7046b89c0e41cd2492f768bd009ec2d5bf570fb42345910c4fe0d28b4'
             '12532a6a196094e876c40db5a8b27e0e2cb73e006783c55699524fb74c061536e705f3767223d9688008be4fbdbfe3494404f5a9c83f3f396e81a8f705784244'
             '43cd3a78712a39d39ec343f537620f271c7741a55424cc37e211a36a661df5c5481049754695431de81694a64077d3467fc08b90dafa7cd33581f879bc502fea'
+            '43cd3a78712a39d39ec343f537620f271c7741a55424cc37e211a36a661df5c5481049754695431de81694a64077d3467fc08b90dafa7cd33581f879bc502fea'
+            'ff09a1b35c9473013e560a486394cf04676f0c2cd743f50365aa5adfd08ffe253c558291f925a23c8e9e1406e909ed5ca091703b597819b62a714f047a10edbe'
+            'd5475b65b839cdb85860351f0c54609769a5465143dcd0d05901452fb307220bff3584ee6d19957dd3aa82dd29d6908e3d6f637c0d5c68fa5fcae8225a8f2cf9'
+            'c54c3ef148bb52f3788586c1fa4c739be6f3b779a1e722fde58e4a64938465f0ac978e4f0c962cbae0efc90f5304ca1853385162d2ce7a29d931cbf76acc7ac8'
             '37e3630ce56d003044168f25c54f65d84e78df386a5405fd1936a3754e85125c64db7fb235d202d578ee8b7e4c736a86632658eb2badb54ac7602d0f248e2783'
             '25da77914dded10c1f432ebcbf29941124138824ceecaf1367b3deedafaecabc082d463abcfa3d15abff59f177491472b505bcb5ba0c4a51bb6b93b4721a23c2')
 
@@ -125,6 +137,9 @@ prepare() {
     patch -p1 < "${srcdir}/5750.diff"
     patch -p1 < "${srcdir}/5966.diff"
     patch -p1 < "${srcdir}/6063.diff"
+    patch -p1 < "${srcdir}/6072.diff"
+    patch -p1 < "${srcdir}/6073.diff"
+    patch -p1 < "${srcdir}/6074.diff"
     patch -p1 < "${srcdir}/d71ff5b42cab85817e5c22c5e21eeaca87e39dec.diff"
     patch -p1 -R < "${srcdir}/5728.diff"
 
