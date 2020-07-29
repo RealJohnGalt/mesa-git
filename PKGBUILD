@@ -11,7 +11,7 @@
 
 pkgname=mesa-git
 pkgdesc="an open-source implementation of the OpenGL specification, git version"
-pkgver=20.2.0_devel.126589.1882b1e5a7d
+pkgver=20.2.0_devel.126609.903a7d0f878
 pkgrel=1
 arch=('x86_64')
 makedepends=('git' 'python-mako' 'xorgproto'
@@ -36,36 +36,39 @@ source=('mesa::git+https://gitlab.freedesktop.org/mesa/mesa.git'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6072.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6073.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6074.diff'
+                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6095.diff'
                 'https://gitlab.freedesktop.org/pepp/mesa/-/commit/d71ff5b42cab85817e5c22c5e21eeaca87e39dec.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/commit/d4d6d1557d03ac7db054798bdd9de683c1622e71.diff'
                 'LICENSE')
 md5sums=('SKIP'
          'd16332b2811550208a64e768aa9701c7'
-         'a4a374ff049778f0b8c4666ee6f7ad20'
+         'a8d6fa9c8bf95d504057de8a7b3f8a41'
          '7964d9537e1927babb95eb2383dbf520'
          '560ebaec0715b95010590f952b918989'
          'f5790c785525365eb9a46fe48812c6aa'
          '1a159646705332e0eae0968b15b9a416'
-         'cfce5e45e07e4f15816ec514e0b867e5'
-         'cfce5e45e07e4f15816ec514e0b867e5'
+         'ed483743a527be9467b79e7a4f2a9f53'
+         'ed483743a527be9467b79e7a4f2a9f53'
          'fe5a7d188a0b9a52e4312c34022c869b'
-         'c7951c927603dc25c69e80b2f097c892'
-         'c00ac7053c647b08d471db523781bbb5'
+         '40d2ebed76a947fa13afbb5dda5c6a85'
+         'fe02395fee39a39f439cb8148baf392a'
+         '6984521344116f6a956812d97c1a5541'
          'd92c6a427f007f563516f01f84358283'
          '790e23e85b78ba05330587cf4663401d'
          '5c65a0fe315dd347e09b1f2826a1df5a')
 sha512sums=('SKIP'
             '79dbe9d4c5f24a97acb1d445bf47d9dd351ca61036e0d6ffdba3e51ac736699afb6bae7a1d327776690ae3261acd520dd0fde171b4b2f991f0a2063398bfc3c7'
-            'cc9770cd7828821eb7f13347747fb452fa2e0f1b97bbeb4e8ec3085dbba92292da12c8b41fc2cf41206dff5bfc04247ca031813af3dc233a17b5e7b27cdf0b54'
+            '85a18f143a8acc8b555560642dd804c42f4e4d7eb1c708f53beaad6f6a047aafb618bde7e71c6f2633e5d99e548a6504dfbb7663eb33f9419e611f2dcffdad92'
             '40b904e951099a5bdd4d449e7a7063762ed4e8d957332bdf1baab53b594a6b4bc3040ab47c02aeb448a8eec9641b7d7e8633e2bcb443e52a1afe36fa49ba4289'
             '2e59abb5c4bf51e363ce73f166287411f971d9dd146f57a133524e67b37e3656baaf21a8f9f5fc2b07fca271d7bea9d15110a8f430e84ab0009251cc653fb081'
             '889565e9a5cc4b1564fab1156b0a88b77e9802d56a5792b315d2552812c4eb478682b9f7046b89c0e41cd2492f768bd009ec2d5bf570fb42345910c4fe0d28b4'
             'c6970e37160009dbff04fa066c7789ec9372ada82534a1df51ec8596dbca71940f72655a46940ba3ce5dba1ed34362ac26cd31f8d762167ed269b40eea2d74d5'
-            '43cd3a78712a39d39ec343f537620f271c7741a55424cc37e211a36a661df5c5481049754695431de81694a64077d3467fc08b90dafa7cd33581f879bc502fea'
-            '43cd3a78712a39d39ec343f537620f271c7741a55424cc37e211a36a661df5c5481049754695431de81694a64077d3467fc08b90dafa7cd33581f879bc502fea'
+            '0688805bbff9781c2b1053a5f528be63186c1b490199b395ab87a4834d8305bbfe241b4db368df29df546092227e51e35d0d6f17b01e983e2ab812ac7d4e7c30'
+            '0688805bbff9781c2b1053a5f528be63186c1b490199b395ab87a4834d8305bbfe241b4db368df29df546092227e51e35d0d6f17b01e983e2ab812ac7d4e7c30'
             'ff09a1b35c9473013e560a486394cf04676f0c2cd743f50365aa5adfd08ffe253c558291f925a23c8e9e1406e909ed5ca091703b597819b62a714f047a10edbe'
-            'd5475b65b839cdb85860351f0c54609769a5465143dcd0d05901452fb307220bff3584ee6d19957dd3aa82dd29d6908e3d6f637c0d5c68fa5fcae8225a8f2cf9'
-            'c54c3ef148bb52f3788586c1fa4c739be6f3b779a1e722fde58e4a64938465f0ac978e4f0c962cbae0efc90f5304ca1853385162d2ce7a29d931cbf76acc7ac8'
+            'e7c50a6d9f02d3e958d46c36482e79a8fa7769831dc70116b22bfe0e9a1faee45fbc18aafb47ad98e6f511e55d1b4f2b5d095e300e3fd2c0b9295e35b87d7b46'
+            '26b4a63ac18f73cb221b4a0f9e970c351b0d98cd662c15879e5db7f94df3233ab5eec0872a576c4c2ecf38f3e192bd9e01bd963c83e18944bad73a37b878f8c9'
+            '43144aa4ec2a2c26a42f57d8d1847644b467a49f79d3688e9f90cc1c8dda0f4639536bfd540f23b981d65fc22cf32af910fcae407acf4a3a3d77d770180664f7'
             '37e3630ce56d003044168f25c54f65d84e78df386a5405fd1936a3754e85125c64db7fb235d202d578ee8b7e4c736a86632658eb2badb54ac7602d0f248e2783'
             '3610ff9aa85b55ce9b86367401464f93562953807fe11cee09617832dae215e49b37072487324b0b50aa940a3a27e59bf4087d8b75e531b815aec0b629911cad'
             '25da77914dded10c1f432ebcbf29941124138824ceecaf1367b3deedafaecabc082d463abcfa3d15abff59f177491472b505bcb5ba0c4a51bb6b93b4721a23c2')
@@ -143,6 +146,7 @@ prepare() {
     patch -p1 < "${srcdir}/6072.diff"
     patch -p1 < "${srcdir}/6073.diff"
     patch -p1 < "${srcdir}/6074.diff"
+    patch -p1 < "${srcdir}/6095.diff"
     patch -p1 < "${srcdir}/d71ff5b42cab85817e5c22c5e21eeaca87e39dec.diff"
     patch -p1 < "${srcdir}/d4d6d1557d03ac7db054798bdd9de683c1622e71.diff"
     patch -p1 -R < "${srcdir}/5728.diff"
