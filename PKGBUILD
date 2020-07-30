@@ -38,6 +38,7 @@ source=('mesa::git+https://gitlab.freedesktop.org/mesa/mesa.git'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6115.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6088.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6090.diff'
+                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/4885.diff'
                 'https://gitlab.freedesktop.org/pepp/mesa/-/commit/d71ff5b42cab85817e5c22c5e21eeaca87e39dec.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/commit/d4d6d1557d03ac7db054798bdd9de683c1622e71.diff'
                 'LICENSE')
@@ -55,6 +56,7 @@ md5sums=('SKIP'
          '0f3d01e7226e77bccb921786794130e0'
          'a62b3707618c5c3f28d5807c001849a5'
          '8a1f59d4502bd216a07843dc845d3046'
+         'a0c4467b62dc4953f40ad67e1f9fbbb9'
          'd92c6a427f007f563516f01f84358283'
          '790e23e85b78ba05330587cf4663401d'
          '5c65a0fe315dd347e09b1f2826a1df5a')
@@ -72,6 +74,7 @@ sha512sums=('SKIP'
             'be2bed4df5a3a70ad4f7fc4c3464db9d9df0a45514e3c59e41cb282ef868d8c55fe6bfe377f6b6b118a5313280cedd78ea11aaaf6f5e3f52ac9e6f11b2ac49e9'
             'bf3423fb4d0727900394cbcc94da0f6f73d79eec13e0d6221d55e567fdd7f5439343577b17e19effa3e9b942ad4146c04544859ed67c1643c393acf72808ad30'
             '3822b8bbda61e4a3453f23480a683732aa0ab8fa1a6f56bf261785ed800a962dabb2eabddb65fd3048b983989ed7bbd247dcb95b73b99d5219729ec2c5a5d97e'
+            '2a409ac821d594f051009a9f03878d7200157738ee3ad0d94f2dae12db8168563a1cb1ca80167d3ed10497f31874baee8615fdd14d4b43a5b6836a3109073057'
             '37e3630ce56d003044168f25c54f65d84e78df386a5405fd1936a3754e85125c64db7fb235d202d578ee8b7e4c736a86632658eb2badb54ac7602d0f248e2783'
             '3610ff9aa85b55ce9b86367401464f93562953807fe11cee09617832dae215e49b37072487324b0b50aa940a3a27e59bf4087d8b75e531b815aec0b629911cad'
             '25da77914dded10c1f432ebcbf29941124138824ceecaf1367b3deedafaecabc082d463abcfa3d15abff59f177491472b505bcb5ba0c4a51bb6b93b4721a23c2')
@@ -149,6 +152,7 @@ prepare() {
     patch -p1 < "${srcdir}/6095.diff"
     patch -p1 < "${srcdir}/6115.diff"
     patch -p1 < "${srcdir}/6088.diff"
+    patch -p1 < "${srcdir}/4885.diff"
     #patch -p1 < "${srcdir}/6090.diff"
     patch -p1 < "${srcdir}/d71ff5b42cab85817e5c22c5e21eeaca87e39dec.diff"
     patch -p1 < "${srcdir}/d4d6d1557d03ac7db054798bdd9de683c1622e71.diff"
