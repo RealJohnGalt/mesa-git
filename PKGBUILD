@@ -11,7 +11,7 @@
 
 pkgname=mesa-git
 pkgdesc="an open-source implementation of the OpenGL specification, git version"
-pkgver=20.2.0_devel.126698.e933ac21cb3
+pkgver=20.2.0_devel.126747.2dec9092bee
 pkgrel=1
 arch=('x86_64')
 makedepends=('git' 'python-mako' 'xorgproto'
@@ -39,6 +39,7 @@ source=('mesa::git+https://gitlab.freedesktop.org/mesa/mesa.git'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6088.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6090.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/4885.diff'
+                'https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6143.diff'
                 'https://gitlab.freedesktop.org/pepp/mesa/-/commit/d71ff5b42cab85817e5c22c5e21eeaca87e39dec.diff'
                 'https://gitlab.freedesktop.org/mesa/mesa/-/commit/d4d6d1557d03ac7db054798bdd9de683c1622e71.diff'
                 'LICENSE')
@@ -46,10 +47,10 @@ md5sums=('SKIP'
          'd16332b2811550208a64e768aa9701c7'
          '055ce630f7ca2a4f3e034d6e24c7b795'
          '7964d9537e1927babb95eb2383dbf520'
-         '560ebaec0715b95010590f952b918989'
+         'b918ed6e740b278e19c7aad592d2a5bb'
          'f5790c785525365eb9a46fe48812c6aa'
-         'fa923b99f37d88d1f73757c70eaba762'
-         'fa923b99f37d88d1f73757c70eaba762'
+         '6a665a6df02c2e6b058ac606c39b76fe'
+         '6a665a6df02c2e6b058ac606c39b76fe'
          'fe5a7d188a0b9a52e4312c34022c869b'
          'fe02395fee39a39f439cb8148baf392a'
          '6984521344116f6a956812d97c1a5541'
@@ -57,6 +58,7 @@ md5sums=('SKIP'
          'a62b3707618c5c3f28d5807c001849a5'
          '8a1f59d4502bd216a07843dc845d3046'
          'a0c4467b62dc4953f40ad67e1f9fbbb9'
+         '62e1e97fd4e28970e7f4f12333ea00f0'
          'd92c6a427f007f563516f01f84358283'
          '790e23e85b78ba05330587cf4663401d'
          '5c65a0fe315dd347e09b1f2826a1df5a')
@@ -64,10 +66,10 @@ sha512sums=('SKIP'
             '79dbe9d4c5f24a97acb1d445bf47d9dd351ca61036e0d6ffdba3e51ac736699afb6bae7a1d327776690ae3261acd520dd0fde171b4b2f991f0a2063398bfc3c7'
             'd09a12f2772abf7c996eb79de6dfc85f52d976d13f82e58453af5a1c57b6f8e203f8be166e0a68adb38696d9312f9cf13b30e00ad96a26f660f64a204c5e64cd'
             '40b904e951099a5bdd4d449e7a7063762ed4e8d957332bdf1baab53b594a6b4bc3040ab47c02aeb448a8eec9641b7d7e8633e2bcb443e52a1afe36fa49ba4289'
-            '2e59abb5c4bf51e363ce73f166287411f971d9dd146f57a133524e67b37e3656baaf21a8f9f5fc2b07fca271d7bea9d15110a8f430e84ab0009251cc653fb081'
+            'f5c614c940952d8252759aeada3d75428a2785e059c17333220e4bd5af6e557fd8e39c05582c64db07c534e39e2ad47b7500895e19a7258f0d1b17484425fecb'
             '889565e9a5cc4b1564fab1156b0a88b77e9802d56a5792b315d2552812c4eb478682b9f7046b89c0e41cd2492f768bd009ec2d5bf570fb42345910c4fe0d28b4'
-            '9b9e62c232e5f7af8b77028e9be00569228f274f5de3704ec05cd23263b8f6934c70fe2d3da1291dacbbcc09ac4595bd38cf1014476234d9c2c402921324c95b'
-            '9b9e62c232e5f7af8b77028e9be00569228f274f5de3704ec05cd23263b8f6934c70fe2d3da1291dacbbcc09ac4595bd38cf1014476234d9c2c402921324c95b'
+            '456207b40c4a1594a7d5c1ecfa5efe424356be7d7cf44dc6a5922fa2f98caa30f965bb3a8211d8c75edcedf00ef4ceb9a460e7fd9a7cc398125ae65fac280a5b'
+            '456207b40c4a1594a7d5c1ecfa5efe424356be7d7cf44dc6a5922fa2f98caa30f965bb3a8211d8c75edcedf00ef4ceb9a460e7fd9a7cc398125ae65fac280a5b'
             'ff09a1b35c9473013e560a486394cf04676f0c2cd743f50365aa5adfd08ffe253c558291f925a23c8e9e1406e909ed5ca091703b597819b62a714f047a10edbe'
             '26b4a63ac18f73cb221b4a0f9e970c351b0d98cd662c15879e5db7f94df3233ab5eec0872a576c4c2ecf38f3e192bd9e01bd963c83e18944bad73a37b878f8c9'
             '43144aa4ec2a2c26a42f57d8d1847644b467a49f79d3688e9f90cc1c8dda0f4639536bfd540f23b981d65fc22cf32af910fcae407acf4a3a3d77d770180664f7'
@@ -75,6 +77,7 @@ sha512sums=('SKIP'
             'bf3423fb4d0727900394cbcc94da0f6f73d79eec13e0d6221d55e567fdd7f5439343577b17e19effa3e9b942ad4146c04544859ed67c1643c393acf72808ad30'
             '3822b8bbda61e4a3453f23480a683732aa0ab8fa1a6f56bf261785ed800a962dabb2eabddb65fd3048b983989ed7bbd247dcb95b73b99d5219729ec2c5a5d97e'
             '2a409ac821d594f051009a9f03878d7200157738ee3ad0d94f2dae12db8168563a1cb1ca80167d3ed10497f31874baee8615fdd14d4b43a5b6836a3109073057'
+            'edd624570a73145701067ed222bce95857a3cf7b7fd3a67046757460adb6d92383d4f9ff62f8f74e25b9aa64024a077de19e32ec77f7e6d728e25f0c659c981b'
             '37e3630ce56d003044168f25c54f65d84e78df386a5405fd1936a3754e85125c64db7fb235d202d578ee8b7e4c736a86632658eb2badb54ac7602d0f248e2783'
             '3610ff9aa85b55ce9b86367401464f93562953807fe11cee09617832dae215e49b37072487324b0b50aa940a3a27e59bf4087d8b75e531b815aec0b629911cad'
             '25da77914dded10c1f432ebcbf29941124138824ceecaf1367b3deedafaecabc082d463abcfa3d15abff59f177491472b505bcb5ba0c4a51bb6b93b4721a23c2')
@@ -94,7 +97,7 @@ sha512sums=('SKIP'
 # 
 
 if [[ ! $MESA_WHICH_LLVM ]] ; then
-    MESA_WHICH_LLVM=4
+    MESA_WHICH_LLVM=3
 fi
 
 case $MESA_WHICH_LLVM in
@@ -153,6 +156,7 @@ prepare() {
     patch -p1 < "${srcdir}/6115.diff"
     patch -p1 < "${srcdir}/6088.diff"
     patch -p1 < "${srcdir}/4885.diff"
+    patch -p1 < "${srcdir}/6143.diff"
     #patch -p1 < "${srcdir}/6090.diff"
     patch -p1 < "${srcdir}/d71ff5b42cab85817e5c22c5e21eeaca87e39dec.diff"
     patch -p1 < "${srcdir}/d4d6d1557d03ac7db054798bdd9de683c1622e71.diff"
